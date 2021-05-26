@@ -1,0 +1,33 @@
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+  
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      
+      -  name: Setup Node.js environment
+         uses: actions/setup-node@v2.1.5
+         with:
+           version: 14
+           
+      - name: Github action for Yarn
+        uses: Borales/actions-yarn@v2.3.0
+        with:
+          cmd: install
+      
+      - name: Creating Build
+        run: sudo yarn build
+
+
+      - name: Installing Surge
+        run: npm i -g surge
+        
+      - name: Deploying on Surge
+        run: surge ./build http://class3-bootcamp2020.surge.sh/ --token ${{ secrets.SURGE_TOKEN }}
