@@ -6,7 +6,7 @@ import Learn from './Learn'
 function App() {
   return (
     <div>
-      <Learn course="Full Stack Serverless Saas" lang={[ "HTML " ,"CSS " ,"JavaScript " ]}  />
+      <Learn course="Full Stack Serverless Saas" language={[ "HTML " ,"CSS " ,"JavaScript " ]}  />
     </div>
   );
 }

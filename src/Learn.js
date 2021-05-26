@@ -4,7 +4,7 @@ function Learn(props){
     return(
         <div>
             <h2>Learn {props.course}.</h2>
-            <h3>Prerequisite:  {props.lang}</h3>
+            <h3>Prerequisite:  {props.language}</h3>
 
         </div>
     )
