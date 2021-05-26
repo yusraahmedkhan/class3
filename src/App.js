@@ -1,11 +1,12 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Learn from './Learn'
+
 
 function App() {
   return (
     <div className="App">
-      <h1>Learning React </h1>
-      <h3>class 3 of Bootcamm2020</h3>
+      <Learn course="Full Stack Serverless Saas" lang={[ "HTML " ,"CSS " ,"JavaScript " ]}  />
     </div>
   );
 }
